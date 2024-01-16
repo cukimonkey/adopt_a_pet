@@ -8,14 +8,15 @@ import { createBrowserRouter, createRoutesFromElements, Route } from 'react-rout
 
 
 const appRouter = createBrowserRouter(createRoutesFromElements(
-  <Route path='/' element={
-     <Root/>
-  }/>
+  <Route path='/' element={<Root/>}>
+      <Route index element={<HomePage />} />
+  </Route>
 ))
 
 function App() {
   return (
-    <RouterProvider router={appRouter}/>
+    <RouterProvider router={appRouter} />
+    
     
   );
 }
