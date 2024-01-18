@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useParams, useSearchParams } from 'react-router-dom';
 import { getPets } from '../../api/petfinder';
 import Hero from '../../components/hero';
 
-// import useParams
 // import Link
 
 const HomePage = () => {
   const [data, setData] = useState(null);
-  const type = ''; // Fix me!
+  const {type} = useParams();
 
   useEffect(() => {
     async function getPetsData() {
